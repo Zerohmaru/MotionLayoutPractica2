@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_moon"
         app:tint="?colorOnPrimary"
-        android:contentDescription="@string/moon" />
+        android:contentDescription="@string/moon"/>
 
     <TextView
         android:id="@+id/credits"
@@ -48,4 +48,6 @@
         android:text="@string/credits"
         android:textSize="24sp"
         android:textColor="?colorOnPrimary" />
+
+        motion:motionDebug="SHOW_PATH" >
 </androidx.constraintlayout.motion.widget.MotionLayout>
