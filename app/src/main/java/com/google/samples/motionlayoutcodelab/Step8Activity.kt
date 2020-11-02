@@ -33,16 +33,14 @@ class Step8Activity : AppCompatActivity() {
     }
 
     private fun coordinateMotion() {
-        fun coordinateMotion() {
-            val appBarLayout: AppBarLayout = findViewById(R.id.appbar_layout)
-            val motionLayout: MotionLayout = findViewById(R.id.motion_layout)
+        val appBarLayout: AppBarLayout = findViewById(R.id.appbar_layout)
+        val motionLayout: MotionLayout = findViewById(R.id.motion_layout)
 
-            val listener = AppBarLayout.OnOffsetChangedListener { unused, verticalOffset ->
-                val seekPosition = -verticalOffset / appBarLayout.totalScrollRange.toFloat()
-                motionLayout.progress = seekPosition
-            }
-
-            appBarLayout.addOnOffsetChangedListener(listener)
+        val listener = AppBarLayout.OnOffsetChangedListener { unused, verticalOffset ->
+            val seekPosition = -verticalOffset / appBarLayout.totalScrollRange.toFloat()
+            motionLayout.progress = seekPosition
         }
+
+        appBarLayout.addOnOffsetChangedListener(listener)
     }
 }
